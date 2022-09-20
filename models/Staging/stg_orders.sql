@@ -6,10 +6,12 @@ SELECT
     ,A.ordersellingprice - A.Ordercostprice AS OrderProfit
     ,A.Ordercostprice
     ,A.ordersellingprice
+    ,B.CustomerID
     ,B.customername
     ,B.segment
     ,B.country
     ,C.category
+    ,C.ProductID
     ,C.productname
     ,c.subcategory
 FROM {{ ref('raw_orders') }} AS A
